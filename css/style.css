@@ -1,0 +1,751 @@
+/* //////////////////////////////////
+
+FONTS 
+
+///////////////////////////////// */
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3171924, 2016-02-15T16:59:28-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HapticPro-SemiBold by Henning Skibbe
+ * URL: http://www.myfonts.com/fonts/henning-skibbe/haptic-pro/pro-semi-bold/
+ * 
+ * Webfont: HapticPro-SemiLight by Henning Skibbe
+ * URL: http://www.myfonts.com/fonts/henning-skibbe/haptic-pro/pro-semi-light/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3171924
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) 2008 by Henning Skibbe. All rights reserved.
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/306654");
+
+  
+@font-face {font-family: 'HapticPro-SemiBold';src: url('../fonts/306654_0_0.eot');src: url('../fonts/306654_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/306654_0_0.woff2') format('woff2'),url('../fonts/306654_0_0.woff') format('woff'),url('../fonts/306654_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HapticPro-SemiLight';src: url('../fonts/306654_1_0.eot');src: url('../fonts/306654_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/306654_1_0.woff2') format('woff2'),url('../fonts/306654_1_0.woff') format('woff'),url('../fonts/306654_1_0.ttf') format('truetype');}
+ 
+
+/* //////////////////////////////////
+
+MAIN STYLES
+
+///////////////////////////////// */
+
+
+body {
+	background-color: #212531;
+	color: #d1d2d4;
+	font-family: 'HapticPro-SemiLight', Helvetica, Arial, 'sans-serif';
+	letter-spacing: .3px;
+}
+
+/* //////////////////////////////////
+
+TEXT STYLES
+
+///////////////////////////////// */
+
+
+h1 {
+	font-size: 2em;
+	font-family: 'HapticPro-SemiBold', Helvetica, Arial, 'sans-serif';
+  padding-top: 0;
+  margin-top: 0;
+}
+
+h2 {
+	font-size: 1.2em;
+	letter-spacing: .3px;
+	line-height: 1.8em;
+  font-weight: normal;
+}
+
+h3 {
+	padding-top: 1em;
+	font-size: 1.2em;
+	font-family: 'HapticPro-SemiBold', Helvetica, Arial, 'sans-serif';
+	padding-bottom: .2em;
+	margin-bottom: 0em;
+}
+
+p {
+	padding-top: 0em;
+	margin-top: 0em;
+	font-size: 1em;
+	line-height: 1.8em;
+  letter-spacing: .5px;
+}
+
+a {
+  text-decoration: none;
+  color: #d1d2d4;
+}
+
+.text a {
+	color: #80D39B;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.text a:hover {
+	opacity: .5;
+}
+
+
+/* //////////////////////////////////
+
+CONTENT STYLES
+
+///////////////////////////////// */
+
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 250px;
+  width: 250px;
+  background-image: linear-gradient(135deg, #d1d2d4 0%, #a7a9ad 50%, rgba(0, 0, 0, 0) 50%);
+  z-index: 0;
+}
+
+#logo {
+	position: fixed;
+  z-index: 999;
+}
+
+#logo img {
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.section {
+  height: 100vh;
+}
+
+.slide img {
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 80vh;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+}
+
+.text {
+  max-width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.subtitle {
+  height: 10%;
+  display: block;
+  z-index: 99;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.subtitle p {
+  font-size: .7em;
+}
+
+
+/* //////////////////////////////////
+
+FULL PAGE CSS
+
+///////////////////////////////// */
+
+/*!
+ * fullPage 2.7.5
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+
+html.fp-enabled,
+.fp-enabled body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#superContainer {
+    height: 100%;
+    position: relative;
+    /* Touch detection for Windows 8 */
+    -ms-touch-action: none;
+    /* IE 11 on Windows Phone 8.1*/
+    touch-action: none;
+}
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+}
+.fp-slide {
+    float: left;
+}
+.fp-slide, .fp-slidesContainer {
+    height: 100vh;
+    display: block;
+}
+.fp-slides {
+    z-index:1;
+    max-height: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+    transition: all 0.3s ease-out;
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
+.fp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.fp-slidesContainer {
+    float: left;
+    position: relative;
+}
+
+.fp-scrollable {
+    overflow: scroll;
+}
+.fp-notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+}
+#fp-nav.right {
+    right: 17px;
+}
+#fp-nav.left {
+    left: 17px;
+}
+.fp-slidesNav{
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+.fp-slidesNav.bottom {
+    bottom: 40px;
+}
+.fp-slidesNav.top {
+    top: 17px;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 15px;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 15px;
+    width: 15px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+    background: url('../img/dot-fill.png');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+ }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 15px;
+    width: 15px;
+    border: 0;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -6px 0 0 -6px;
+    background: url('../img/dot.png');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 15px;
+    height: 15px;
+    opacity: .6;
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: 0px;
+    color: #fff;
+    font-size: 1em;
+    padding-left: 5px;
+    font-family: font-family: 'HapticPro-SemiBold', Helvetica, Arial, 'sans-serif';
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+#fp-nav ul li .fp-tooltip.right {
+    right: 20px;
+}
+#fp-nav ul li .fp-tooltip.left {
+    left: 20px;
+}
+.fp-auto-height.fp-section,
+.fp-auto-height .fp-slide,
+.fp-auto-height .fp-tableCell{
+    height: auto !important;
+}
+
+/* //////////////////////////////////
+
+MEDIA QUERIES (1024)
+
+///////////////////////////////// */
+
+@media only screen and (max-device-width: 1024px) {
+  h1 {
+  font-size: 2em;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    padding-top: 0;
+    margin-top: 0;
+    font-weight: normal;
+  }
+
+  h3 {
+    padding-top: .5em;
+    font-size: 1.6em;
+    line-height: 1.4em;
+    -webkit-margin-before: .2em;
+    margin-top: 0;
+  }
+
+  p {
+    padding-top: 0em;
+    margin-top: 0em;
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+
+  #header {
+    height: 200px;
+    width: 200px;
+    background-image: linear-gradient(135deg, #d1d2d4 0%, #a7a9ad 50%, rgba(0, 0, 0, 0) 50%);
+  }
+
+  #logo img {
+    margin-top: 18px;
+    margin-left: 18px;
+    height: 80px;
+    width: auto;
+  }
+
+  .text {
+    max-width: 80vw;
+    padding-left: 20px;
+    padding-top: 80px;
+  }
+
+  .image {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .image img {
+    margin-top: 5vh;
+    padding-left: 20px;
+    max-height: 60vh;
+  }
+
+  .subtitle {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .subtitle p{
+    font-size: 1.4em;
+    line-height: 1.4em;
+    padding-top: 25px;
+  }
+
+  .fp-slides {
+    max-height: 90vh;
+  }
+
+.fp-slides img {
+    z-index:1;
+    max-width: 80vw;
+    overflow: hidden;
+    position: relative;
+}
+.fp-slidesNav.bottom {
+    bottom: 20px;
+}
+
+  #fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 20px;
+    width: 20px;
+    margin: -6px 0 0 -6px;
+    background: url('../img/dot-fill.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+ }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin: -6px 0 0 -6px;
+    background: url('../img/dot.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+}
+
+#fp-nav ul li{
+  padding: 10px;
+}
+
+.fp-slidesNav ul li {
+  padding: 5px;
+}
+
+}
+
+
+/* //////////////////////////////////
+
+MEDIA QUERIES (768)
+
+///////////////////////////////// */
+
+@media screen and (max-device-width: 768px) {
+  h1 {
+  font-size: 2.8em;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.7em;
+    line-height: 1.6em;
+    padding-top: 0;
+    margin-top: 0;
+    font-weight: normal;
+  }
+
+  h3 {
+    padding-top: 1em;
+    font-size: 2.2em;
+    line-height: 1.6em;
+    -webkit-margin-before: .5em;
+    margin-top: 0;
+  }
+
+  p {
+    padding-top: 0em;
+    margin-top: 0em;
+    font-size: 1.7em;
+    line-height: 1.6em;
+  }
+
+  #header {
+    height: 260px;
+    width: 260px;
+    background-image: linear-gradient(135deg, #d1d2d4 0%, #a7a9ad 50%, rgba(0, 0, 0, 0) 50%);
+  }
+
+  #logo img {
+    margin-top: 25px;
+    margin-left: 25px;
+    height: 100px;
+    width: auto;
+  }
+
+  .text {
+    max-width: 80vw;
+    padding-left: 10px;
+  }
+
+  .image {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .image img {
+    margin-top: 5vh;
+    padding-left: 20px;
+  }
+
+  .subtitle {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .subtitle p{
+    font-size: 1.7em;
+    line-height: 1.6em;
+    padding-top: 25px;
+  }
+
+  .fp-slides {
+    max-height: 90vh;
+  }
+
+.fp-slides img {
+    z-index:1;
+    max-width: 80vw;
+    overflow: hidden;
+    position: relative;
+}
+.fp-slidesNav.bottom {
+    bottom: 20px;
+}
+
+  #fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 30px;
+    width: 30px;
+    margin: -20px 0 0 -20px;
+    background: url('../img/dot-fill.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+ }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    margin: -20px 0 0 -20px;
+    background: url('../img/dot.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+}
+
+#fp-nav ul li{
+  padding: 20px;
+}
+
+.fp-slidesNav ul li {
+  padding: 15px;
+}
+
+}
+
+/* //////////////////////////////////
+
+MEDIA QUERIES (480)
+
+///////////////////////////////// */
+
+@media screen and (max-device-width: 480px) {
+  h1 {
+  font-size: 2.8em;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 2em;
+    line-height: 1.6em;
+    padding-top: 0;
+    margin-top: 0;
+    font-weight: normal;
+  }
+
+  h3 {
+    padding-top: 1em;
+    font-size: 2.2em;
+    line-height: 1.6em;
+    -webkit-margin-before: .5em;
+    margin-top: 0;
+  }
+
+  p {
+    padding-top: 0em;
+    margin-top: 0em;
+    font-size: 2em;
+    line-height: 1.6em;
+  }
+
+  #header {
+    height: 260px;
+    width: 260px;
+    background-image: linear-gradient(135deg, #d1d2d4 0%, #a7a9ad 50%, rgba(0, 0, 0, 0) 50%);
+  }
+
+  #logo img {
+    margin-top: 25px;
+    margin-left: 25px;
+    height: 100px;
+    width: auto;
+  }
+
+  .text {
+    max-width: 80vw;
+    padding-left: 10px;
+  }
+
+  .image {
+    height: 40vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .image img {
+    margin-top: 5vh;
+    padding-left: 20px;
+  }
+
+  .subtitle {
+    height: auto;
+    margin-top: 0;
+  }
+
+  .subtitle p{
+    font-size: 2em;
+    line-height: 2.4em;
+    padding-top: 25px;
+  }
+
+  .fp-slides {
+    max-height: 90vh;
+  }
+
+.fp-slides img {
+    z-index:1;
+    max-width: 80vw;
+    overflow: hidden;
+    position: relative;
+}
+.fp-slidesNav.bottom {
+    bottom: 20px;
+}
+
+  #fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 30px;
+    width: 30px;
+    margin: -20px 0 0 -20px;
+    background: url('../img/dot-fill.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+ }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    margin: -20px 0 0 -20px;
+    background: url('../img/dot.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+}
+
+#fp-nav ul li{
+  padding: 20px;
+}
+
+.fp-slidesNav ul li {
+  padding: 15px;
+}
+
+}
